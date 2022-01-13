@@ -10,7 +10,7 @@ const generateNewCard = (taskData) => `
   </div>
   <div class="card-body">
   <img class="card-img-top" src=${taskData.imageUrl} alt="...">
-   <h5 class="card-title mt-3 fw-bolder text-primary">${taskData.taskTitle}</h5>
+   <h5 class="card-title mt-3 fw-bolder text-primary">${taskData.taskTask}</h5>
    <p class="card-text">${taskData.taskDescription}</p>
    <a href="#" class="btn btn-primary">${taskData.taskType}</a>
   </div>
@@ -34,7 +34,7 @@ cards.map((cardObject) => {
 
   //update our globalStore
   globalStore.push(cardObject);
-  localStorage.setItem("tasky",JSON.stringify({cards:globalStore}));
+  
 }
 
 )
